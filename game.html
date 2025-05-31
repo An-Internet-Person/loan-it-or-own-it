@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan It or Own It</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Loan It or Own It</h1>
+    <div id="scenario-box">
+      <p id="scenario-text">Loading scenario...</p>
+      <div class="choice-buttons">
+        <button id="choice1">Option 1</button>
+        <button id="choice2">Option 2</button>
+      </div>
+    </div>
+    <div id="results-box" style="display: none;">
+      <h2>You Chose:</h2>
+      <p id="chosen-option"></p>
+      <div style="margin: 20px auto; max-width: 300px; background: #ddd; border-radius: 10px; overflow: hidden;">
+  <div id="progress-bar" style="height: 20px; width: 0%; background-color: #1a73e8; transition: width 0.3s;"></div>
+</div>
+<p id="alt-label" style="font-size: 0.9em; color: #1a73e8; margin-top: 10px;"></p>
+<button id="reset-button" style="margin-top: 20px; background-color: #e53935;">
+  Reset Game
+</button>
+      <div class="pros-cons">
+        <div>
+          <h3>Pros</h3>
+          <ul id="pros-list"></ul>
+        </div>
+        <div>
+          <h3>Cons</h3>
+          <ul id="cons-list"></ul>
+        </div>
+      </div>
+      <button id="next-button">Next Scenario</button>
+    </div>
+  </div>
+
+  <script src="scenarios.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
