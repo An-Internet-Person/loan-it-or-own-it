@@ -178,4 +178,120 @@ const scenarios = [
       }
     ]
   }
+  ,
+{
+  text: "Would you rather:\n1. Rely on expensive, patchy systems for childcare, eldercare, and mental health\nOR\n2. Be part of a community care commons—free access to trusted, trained caregivers for all ages?",
+  choices: ["Go it alone with care", "Join the community care system"],
+  prosCons: [
+    {
+      pros: [
+        "Private, individualized service",
+        "Choose your own providers"
+      ],
+      cons: [
+        "Expensive and inconsistent quality",
+        "Burnout from juggling everything",
+        "Waitlists and inaccessibility"
+      ]
+    },
+    {
+      pros: [
+        "Trusted, shared care workers",
+        "Care is a right, not a luxury",
+        "Reduced stress for families and caregivers"
+      ],
+      cons: [
+        "Shared scheduling and decision-making",
+        "You may bond deeply with a neighbor’s grandma"
+      ]
+    }
+  ]
+},
+
+{
+  text: "Would you rather:\n1. See a doctor, pay a copay, then get surprise-billed months later\nOR\n2. Get care from community-paid health workers—no bills, no insurance drama?",
+  choices: ["Navigate the private health system", "Access community-based care"],
+  prosCons: [
+    {
+      pros: [
+        "Familiar providers and networks",
+        "Choice of specialists"
+      ],
+      cons: [
+        "Surprise bills, insurance nightmares",
+        "Inaccessible for many",
+        "Financial stress tied to illness"
+      ]
+    },
+    {
+      pros: [
+        "All care is prepaid by the community",
+        "Focus on health, not paperwork",
+        "No cost at the point of service"
+      ],
+      cons: [
+        "Shared planning for community health needs",
+        "No one profits from your illness"
+      ]
+    }
+  ]
+},
+
+{
+  text: "Would you rather:\n1. In an emergency, fend for yourself or buy supplies at 3x markup\nOR\n2. Live in a system where food, water, housing, and care auto-distribute to those in crisis?",
+  choices: ["Stockpile and scramble", "Rely on a shared disaster response system"],
+  prosCons: [
+    {
+      pros: [
+        "Full control over your own prep",
+        "Independent choices"
+      ],
+      cons: [
+        "Expensive, unpredictable, isolating",
+        "Price gouging during crisis",
+        "No safety net"
+      ]
+    },
+    {
+      pros: [
+        "Built-in resilience and community support",
+        "No one is left behind",
+        "Solidarity in the face of chaos"
+      ],
+      cons: [
+        "Shared decision-making on resource allocation",
+        "You might have to share your backup chili with Bob next door"
+      ]
+    }
+  ]
+}
+,
+{
+  text: "Would you rather:\n1. Spend most of your waking life doing paid labor just to afford basic survival\nOR\n2. Live in a world where survival is guaranteed and you’re free to contribute however you choose?",
+  choices: ["Work to survive", "Live, then choose your work"],
+  prosCons: [
+    {
+      pros: [
+        "Familiar system with clear expectations",
+        "Your income reflects market value"
+      ],
+      cons: [
+        "Must work to live, even in jobs you hate",
+        "Burnout, stress, and little time for creativity or rest",
+        "Limited by availability of jobs, not passion"
+      ]
+    },
+    {
+      pros: [
+        "Everyone’s basic needs are covered—housing, food, care",
+        "People contribute based on passion, not pressure",
+        "Work becomes meaningful, not mandatory"
+      ],
+      cons: [
+        "You may not 'own' your success the same way",
+        "Some people might choose to contribute less (and be annoying about it)"
+      ]
+    }
+  ]
+}
 ];
