@@ -1,69 +1,116 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-  text-align: center;
-  padding: 20px;
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 #game-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 h1 {
-  color: #1a73e8;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #222;
 }
 
-.choice-buttons {
+#scenario-text {
+  font-size: 1.3em;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.vote-buttons {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-button {
-  background-color: #1a73e8;
+.support-button {
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 15px 25px;
-  font-size: 16px;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 1.1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
+  min-width: 140px;
 }
 
-button:hover {
-  background-color: #0f5ec1;
+.support-button:hover {
+  background-color: #388e3c;
 }
 
-#results-box {
+.oppose-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 140px;
+}
+
+.oppose-button:hover {
+  background-color: #c62828;
+}
+
+#result-box, #alt-world-screen {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   margin-top: 30px;
 }
 
-.pros-cons {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+#outcome-text {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #444;
 }
 
-.pros-cons div {
-  width: 45%;
-  background-color: #f0f0f0;
-  padding: 10px;
+#next-button, #restart-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
+  background-color: #1a73e8;
+  color: white;
+  transition: background-color 0.2s ease;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+#next-button:hover, #restart-button:hover {
+  background-color: #1558b0;
 }
 
-li::before {
-  content: "– ";
-  color: #555;
+#progress-bar {
+  height: 20px;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+#alt-label {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #4caf50;
 }

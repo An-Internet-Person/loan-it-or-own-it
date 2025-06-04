@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposal Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fdfdfd;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h2, h3 {
+      margin-top: 1.5em;
+      color: #1a73e8;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .outcomes {
+      background: #f0f0f0;
+      padding: 15px;
+      border-left: 5px solid #4caf50;
+      margin-top: 30px;
+    }
+
+    .outcomes ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="proposal-content">Loading proposal...</div>
+
+  <script src="proposalData.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    const container = document.getElementById('proposal-content');
+    const proposal = proposalData[id];
+
+    if (!proposal) {
+      container.innerHTML = `<p>❌ Proposal not found.</p>`;
+    } else {
+      let html = `<h1>${proposal.title}</h1>`;
+
+      if (proposal.summary) {
+        html += `<p><strong>Summary:</strong> ${proposal.summary}</p>`;
+      }
+
+      if (proposal.details) {
+        html += `<div class="section"><h2>Details</h2><p>${proposal.details}</p></div>`;
+      }
+
+      if (proposal.outcomes) {
+        html += `<div class="outcomes">
+          <h3>📈 If Approved:</h3>
+          <ul>${proposal.outcomes.approved.map(o => `<li>${o}</li>`).join('')}</ul>
+          <h3>📉 If Rejected:</h3>
+          <ul>${proposal.outcomes.rejected.map(o => `<li>${o}</li>`).join('')}</ul>
+        </div>`;
+      }
+
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
